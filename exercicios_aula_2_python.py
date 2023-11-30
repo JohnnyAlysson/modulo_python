@@ -11,3 +11,16 @@ lista[2] = 10.5   # Reatribuindo um novo item a uma posição especificifica na 
 print(lista) 
 lista.append("oi") # append adiciona um item novo ao fim da lista
 print(lista)
+
+lista = [60,20,40,10,12,2,50]
+lista.sort()
+print (lista)
+lista.reverse()
+print(lista)
+soma= sum(lista)
+print(soma)
+print(min(lista))
+print(max(lista))
+
+for indices,i in enumerate(lista):
+    print(indices + 1 , ">>>" ,i)
