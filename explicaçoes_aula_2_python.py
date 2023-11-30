@@ -25,5 +25,5 @@ print(max(lista))
 for indices,i in enumerate(lista):
     print(indices + 1 , ">>>" ,i)
 
-lista.insert(3,2)
+lista.insert([3,2])
 print(lista)
