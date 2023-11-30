@@ -1,74 +1,40 @@
-# 2. Ler uma lista de 5 números inteiros e mostre cada número da lista.
-i =0
-lista=[]
-for i in range(5):
-    numero=int(input("\n Digite um número inteiro: "))
-    lista.append(numero)
-print(lista)
+# 8. Faça um programa que armazene 15 números inteiros em um vetor e
+# depois permita que o usuário digite um número inteiro para ser buscado no vetor, 
+# se for encontrado o programa deve imprimir a posição desse número no vetor, caso contrário,
+# deve imprimir a mensagem: "Nao encontrado!".
 
-# 3. Ler uma lista de 10 números inteiros e mostre-os na ordem inversa(descrescente).
-i =0
 lista=[]
 for i in range(15):
-    numero=int(input("\n Digite um número inteiro: "))
-    lista.append(numero)
-lista.sort()
-lista.reverse()
-print(lista) 
-
-# 4. Ler uma lista com 4 notas, em seguida o programa deve exibir as notas e a média.
-i =0
-lista=[]
-for i in range(4):
-    nota=float(input(f"\n Digite a {i+1}° nota: "))
-    while True: #validação do input
-        if nota > 10:
-            print("Valor inválido")
-            nota= float(input("Digite uma nota de 0 a 10:"))
-        else:
-            break
-    lista.append(nota)
-
-print(lista)
-print(f"A média das notas é: {sum(lista)/4}")
-
-# 5. Ler uma lista com 20 idades e exibir a maior e menor.
-i =0
-lista=[]
-for i in range(20):
-    idade=int(input("\n Digite uma idade: "))
-    while True: #validação do input
-        if idade < 0 or idade > 120:
-            print("Valor inválido")
-            idade= int(input("Digite uma idade entre 0 e 120 anos: "))
-        else:
-            break    
-    lista.append(idade)
-print(max(lista))
-print(min(lista))
-
-
-# 6. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem numerada.
-i =0
-lista=[]
-for i in range(10):
-    letra=input("\n Digite uma letra: ")
-    lista.append(letra)
-for indice,item in enumerate(lista):
-    print(indice + 1,"=",item)
-
-# 7. Ler uma lista de 15 números inteiros e mostre cada número juntamente com a sua posição na lista.
-i =0
-lista=[]
-for i in range(15):
-    numero=input("\n Digite um número: ")
+    numero= input("\nDigite um número inteiro: ")
     lista.append(numero)
 
-for indice,item in enumerate(lista):
-    print(indice + 1,"=",item)
+procura=input("\nAgora, Qual número você deseja procurar? ")
+
+for indice,i in enumerate(lista):
+    if procura == i:
+        print(f"O número está na posição {indice+1}")
+        break
+
+    elif indice == 14:
+        print("Número não encontrado")
 
 
+# 9. Faça um programa que armazene 8 números em uma lista e imprima todos os números. Ao final, imprima o total de números múltiplos de seis.
+ 
+# 10. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule e armazene a média. 
+# Armazene também a situação do aluno: 1- Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem contendo as notas, a média e a situação de cada aluno.
+# Utilize quantas listas forem necessárias para armazenar os dados.
+
+# nomes =[]
+# notas_1 =[]
+# notas_2 =[]
+# medias =[]
+# situacões =[]
 
 
-
-
+# for i in range(15):
+#     nome=input(f"Digite no nome do {i}° aluno(a)")
+#     nota_1=input(f"Digite a nota 1 do {i}° aluno(a)")
+#     nota_2=input(f"Digite a nota 2 do {i}° aluno(a)")
+#     media=input(f"Digite a nota 1 do {i}° aluno(a)")
+#     situacao=input(f"Digite a nota 1 do {i}° aluno(a)")
