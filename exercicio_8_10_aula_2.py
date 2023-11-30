@@ -4,19 +4,44 @@
 # 9. Faça um programa que armazene 8 números em uma lista e imprima todos os números. Ao final, imprima o total de números múltiplos de seis.
  
 # 10. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule e armazene a média. 
-# Armazene também a situação do aluno: 1- Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem contendo as notas, a média e a situação de cada aluno.
+# Armazene também a situação do aluno: 1- Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem contendo as notas,
+# a média e a situação de cada aluno.
 # Utilize quantas listas forem necessárias para armazenar os dados.
 
 nomes =[]
 notas_1 =[]
 notas_2 =[]
 medias =[]
-situacões =[]
+situacoes =[]
 
 
 for i in range(15):
-    nome=input(f"Digite no nome do {i}° aluno(a)")
-    nota_1=input(f"Digite a nota 1 do {i}° aluno(a)")
-    nota_2=input(f"Digite a nota 2 do {i}° aluno(a)")
-    media=input(f"Digite a nota 1 do {i}° aluno(a)")
-    situacao=input(f"Digite a nota 1 do {i}° aluno(a)")
+    nome=input(f"Digite no nome do {i+1}° aluno(a)")
+    nomes.append(nome)
+    nota_1=float(input(f"Digite a nota 1 do {i+1}° aluno(a)"))
+    while True:
+        if nota_1 > 10 or nota_1 < 0:
+            print("Valor inválido")
+            nota_1 = float(input("Digite novamente uma nota de 0 a 10:"))
+        else:
+            break
+    notas_1.append(nota_1)
+    nota_2=float(input(f"Digite a nota 2 do {i+1}° aluno(a)"))
+    while True:
+        if nota_2 > 10 or nota_2 < 0:
+            print("Valor inválido")
+            nota_2 = float(input("Digite novamente uma nota de 0 a 10:"))
+        else:
+            break 
+    notas_2.append(nota_2)   
+    media=(nota_1+nota_2)/2
+    medias.append(media)
+    if media >=7:
+        situacoes.append("Aprovado")
+    else:
+        situacoes.append("Reprovado")
+
+print("/nNúmero / nome / media / situação")
+for indice,i in enumerate(nomes):
+
+    print(indice+1,"------",i,"------",medias[indice],"------",situacoes[indice])
