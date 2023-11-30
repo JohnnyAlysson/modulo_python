@@ -20,7 +20,15 @@ for indice,i in enumerate(lista):
 
 
 # 9. Faça um programa que armazene 8 números em uma lista e imprima todos os números. Ao final, imprima o total de números múltiplos de seis.
- 
+lista=[]
+for i in range(8):
+     numero=int(input("Digite digite um número inteiro: " ))
+     lista.append(numero)
+    
+ for i in lista:
+     if i % 6 ==0:
+         print(i) 
+         
 # 10. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule e armazene a média. 
 # Armazene também a situação do aluno: 1- Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem contendo as notas, a média e a situação de cada aluno.
 # Utilize quantas listas forem necessárias para armazenar os dados.
