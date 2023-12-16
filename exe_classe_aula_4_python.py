@@ -92,40 +92,77 @@
 # for i in grupo:
 #     print(i," = ", "telefone:",grupo.get(i)[0],", ","idade:",grupo.get(i)[1])
 
-# 07. Faça um programa que carregue um dicionário com os modelos de cinco carros (exemplo de modelos: FUSCA, GOL, VECTRA etc). 
-#O dicionário deve armazenar quantos quilômetros cada um desses carros faz com um litro de combustível e o nome do veículo. 
-# Calcule e mostre:
-# O modelo do carro mais econômico;
-# Quantos litros de combustível cada um dos carros cadastrados consome para percorrer uma distância de 1000 quilômetros e quanto isto custará, considerando um que a gasolina custe R$ 5,25 o litro. 
-# Abaixo segue uma tela de exemplo. 
-# O disposição das informações deve ser o mais próxima possível ao exemplo. 
-# Os dados são fictícios e podem mudar a cada execução do programa.
-# Veículo 1
-# Nome: fusca
-# Km por litro: 7
-carros={}
+# # 07. Faça um programa que carregue um dicionário com os modelos de cinco carros (exemplo de modelos: FUSCA, GOL, VECTRA etc). 
+# #O dicionário deve armazenar quantos quilômetros cada um desses carros faz com um litro de combustível e o nome do veículo. 
+# # Calcule e mostre:
+# # O modelo do carro mais econômico;
+# # Quantos litros de combustível cada um dos carros cadastrados consome para percorrer uma distância de 1000 quilômetros e quanto isto custará, considerando um que a gasolina custe R$ 5,25 o litro. 
+# # Abaixo segue uma tela de exemplo. 
+# # O disposição das informações deve ser o mais próxima possível ao exemplo. 
+# # Os dados são fictícios e podem mudar a cada execução do programa.
+# # Veículo 1
+# # Nome: fusca
+# # Km por litro: 7
 
-for i in range(2):
-    modelo=input(f"Digite o modelo do {i+1}° carro:")
-    consumo=float(input(f"Digite o consumo do {i+1}° veículo em km/l:"))
-    carros[f"veiculo{i+1}"]= {
-        "modelo":modelo,
-        "consumo":consumo
-    }
+# #Solicitação de dados:
+# carros={}
+# for i in range(5):
+#     modelo=input(f"Digite o modelo do {i+1}° carro:")
+#     consumo=float(input(f"Digite o consumo do {i+1}° veículo em km/l:"))
+#     carros[f"Veiculo {i+1}"]= {
+#         "modelo":modelo,
+#         "consumo":consumo
+#     }
+# #Calculo carro mais econômico:
+# menor_consumo=0
+# for i in carros:
+#     if carros.get(i)["consumo"]>menor_consumo:
+#         menor_consumo = carros.get(i)["consumo"]
+#         modelo=carros.get(i)["modelo"]
+# print(modelo,"-",menor_consumo, "km/l")
 
-maior=0
-for i in carros:
-    if carros.get(i)["consumo"]>maior:
-        maior = carros.get(i)["consumo"]
-        modelo=carros.get(i)["modelo"]
-print(modelo,"-",maior, " km/l")
+# # Calculo consumo e custo em 1000 km
+# for i in carros:
+#     calculo_litros = 1000.0 / carros.get(i)["consumo"]
+#     print(f"{carros.get(i)["modelo"]} precisa de {calculo_litros:.2f} litros de combustivel para percorrer 1000 km, e custará R${(calculo_litros * 5.25):.2f} ")
 
+# # Apresentação de forma ordenada:
+# for i in carros:
+#     print(f"    {i}","\n","   Nome: ",carros.get(i)["modelo"],"\n"," Km por litro: ",carros.get(i)["consumo"])
 
-for i in carros
+# # 08. estoque = {"tomate": [1000, 2.30],
+# #  			"alface": [500, 0.45],
+# #  			"batata": [2001, 1.20],
+# #                 "feijão": [100, 1.50]}
 
+# # Dado o dicionário acima só efetue a venda e dê baixa no estoque quando a qtde em estoque for maior que a qtde solicitada. 
 
+# #Dicionário
+# estoque = {"tomate": [1000, 2.30],
+#   			"alface": [500, 0.45],
+#   		    "batata": [2001, 1.20],
+#             "feijão": [100, 1.50]}
+# # imprimir itens, quantidade em estoque e valor
+# for i in estoque:
+#     print(i,"\n","Estoque:",estoque.get(i)[0],"\n","Valor:",estoque.get(i)[1])
 
+# #Solicitar o item e a qt_desejada
+# item= input("Digite o item desejado: ")
+# qt_desejada = int(input("Digite a quantidade desejada: "))
 
+# #Checar se a qt desejada é menor que a qt em estoque
+#     #se qt_solicitada < qt_em_estoque então efetuará a venda mostrando o valor total e dará baixa no estoque atual.
+#     #Caso contrário programa informa que não possui essa quantidade no estoque e mostra a quantidade atual
+    
+# if qt_desejada < estoque.get(item)[0]:
+#     print(f"Valor total é : {qt_desejada*estoque.get(item)[1]}\n")
+#     estoque.get(item)[0]=estoque.get(item)[0]-qt_desejada
+# else:
+#     print("Não possuimos quantidade suficiente no estoque")
+
+# # novo imprimir itens, quantidade em estoque e valor
+# for i in estoque:
+#     print(i,"\n","Estoque:",estoque.get(i)[0],"\n","Valor:",estoque.get(i)[1])
 
 
 
