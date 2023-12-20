@@ -193,7 +193,3 @@ for i in lista_funcionarios:
 
     
 
-
-
-
-
