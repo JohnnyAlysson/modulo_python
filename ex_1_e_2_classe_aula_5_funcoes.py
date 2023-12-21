@@ -1,0 +1,1 @@
+# Class about functions:

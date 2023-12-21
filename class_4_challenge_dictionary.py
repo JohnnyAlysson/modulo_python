@@ -16,12 +16,13 @@
 
 # Working with classes and function for validating:
 
-def grade_validation(grade):
+def gradeValidation(grade):
+    # print(grade)
     while grade >10 or grade <0:
         grade = float(input("\n Invalid grade, please insert a grade between 0 and 10: "))
-
-
-# Dict definition format =  {1:[nome,idade,(math1,math2)(science1,science2),(history1,history2)]} 
+      
+    return grade
+ 
 list_of_students ={
 }
 
@@ -44,22 +45,23 @@ while True:
         while student_age >150 or student_age<6: print("\nInvalid Age, please insert a age between 6 and 100: ");student_age= int(input("\n Age: "))
        
         student_1st_grade_MATH = float(input("\n What's the student's first grade in math: "))
-        grade_validation(student_1st_grade_MATH)
+        student_1st_grade_MATH= gradeValidation(student_1st_grade_MATH) 
+
 
         student_2nd_grade_MATH = float(input("\n What's the student's second grade in math: "))
-        grade_validation(student_2nd_grade_MATH)
+        student_2nd_grade_MATH= gradeValidation(student_2nd_grade_MATH)
 
         student_1st_grade_SCIENCE = float(input("\n What's the student's first grade in science: "))
-        grade_validation(student_1st_grade_SCIENCE)
+        student_1st_grade_SCIENCE = gradeValidation(student_1st_grade_SCIENCE)
 
         student_2nd_grade_SCIENCE = float(input("\n What's the student's second grade in science: "))
-        grade_validation(student_2nd_grade_SCIENCE)
+        student_2nd_grade_SCIENCE = gradeValidation(student_2nd_grade_SCIENCE)
         
         student_1st_grade_HISTORY = float(input("\n What's the student's first grade in history: "))
-        grade_validation(student_1st_grade_HISTORY)
+        student_1st_grade_HISTORY =  gradeValidation(student_1st_grade_HISTORY)
 
         student_2nd_grade_HISTORY = float(input("\n What's the student's second grade in history: "))
-        grade_validation(student_2nd_grade_HISTORY) 
+        student_2nd_grade_HISTORY =gradeValidation(student_2nd_grade_HISTORY) 
 
         mathgrades=(student_1st_grade_MATH,student_2nd_grade_MATH)
         sciencegrades=(student_1st_grade_SCIENCE,student_2nd_grade_SCIENCE)
