@@ -2,7 +2,7 @@
 
 # Sistema de Cadastro de Alunos - passo 1
 # Cadastro de Alunos: O programa deve permitir ao usuário
-#cadastrar alunos. Cada aluno terá as seguintes
+# Cadastrar alunos. Cada aluno terá as seguintes
 # informações: nome, idade e 2 notas em três disciplinas:
 # Matemática, Ciências e História. Os dados de cada aluno
 # devem ser armazenados em um dicionário com as
