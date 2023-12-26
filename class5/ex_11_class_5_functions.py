@@ -41,17 +41,17 @@ def countLetterSpacesNsigns(message):
             count_signs +=1
     print(f"Number of letters in this sentences is : {count_letter}",
           "\n",
-          f"Number of spaces in this sentense is{count_spaces}"
+          f"Number of spaces in this sentense is {count_spaces}"
           "\n",
           f"Number of signs in this sentense is {count_signs}"
           )
           
 
 # Solicitar uma mensagem e um caractere para ser removido
-user_message= input("What is the message ?")
+user_message= input("What is the message? ")
 user_character=input("what character do you want to substitute: ")
 
 # Chamar função
 subistituteCharacter(user_message,user_character)
-
+countLetterSpacesNsigns(user_message)
 
