@@ -44,8 +44,12 @@ def consultarContato(nome):
         print("\nNome não encontrado na sua lista de contatos")
     #2.5 show contact list consultarContatos
 def consultarContatos():
+    count = 1
     for contact in contact_list:
+        print(f"*"*30)
+        print(f"{count}° contato:")
         print(f" Nome : {contact}, Número : {contact_list.get(contact)}")
+        count +=1
     #2.6 clean contact list limparContatos
 def limparContatos():
     contact_list.clear()
