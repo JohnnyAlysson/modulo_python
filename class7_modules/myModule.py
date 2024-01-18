@@ -40,3 +40,17 @@ def rollDie():
     print(f" number 4 appeared {round((count4/1000000),2)*100} %")
     print(f" number 5 appeared {round((count5/1000000),2)*100} %")
     print(f" number 6 appeared {round((count6/1000000),2)*100} %")
+
+def shuffleWord(word : str):
+    breaking_word=[]
+    for letter in word:
+        breaking_word.append(letter.lower())
+        #adicionar title aleatorio
+
+
+    random.shuffle(breaking_word)
+    new_word= ""
+    for i in breaking_word:
+        new_word= new_word+i
+    
+    print(new_word)
