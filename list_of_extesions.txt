@@ -4,3 +4,4 @@ dracula
 imagepreview
 material icon theme
 vspets
+indent rainbow
