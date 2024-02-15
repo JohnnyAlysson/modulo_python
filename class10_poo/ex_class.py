@@ -17,4 +17,4 @@ class Carro():
 carro1 = Carro("prata","hilux","2020","Toyota")
 carro2 = Carro("vermelho","moby","2016","Fiat")
 print(carro1.marca)
-print(carro2.ligar())
+carro2.ligar()

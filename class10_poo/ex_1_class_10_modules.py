@@ -11,6 +11,9 @@ class Cachoro():
     def latir(self):
         print(f" {self.nome} : Au Au")
 
+    def pegarBola(self):
+        print(f" {self.nome} pegou a bolinha:")
+
 
 cachorro1 = Cachoro("Fuxico","SRD","5")
 cachorro2 = Cachoro("Lulu","Akita","3")
