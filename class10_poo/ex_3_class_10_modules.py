@@ -6,3 +6,10 @@
 class Empresa:
     def __init__(self,funcionario):
         pass
+
+
+
+
+class funcionario:
+    def __init__(self) -> None:
+        pass
