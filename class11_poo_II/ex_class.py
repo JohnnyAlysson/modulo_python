@@ -24,7 +24,8 @@ class Conta():
             print("Voce nao possui saldo suficiente")
         else:
             saldo -=valor_saque
-            self.extrato.update({time : f"- {valor_saque}" })
+            time_now = str(datetime.now())
+            self.extrato.update({time_now : f"- {valor_saque}" })
     
     def consultarSaldo(self):
         print(f"Seu saldo atual e:{self.saldo}")
