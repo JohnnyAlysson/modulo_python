@@ -1,6 +1,6 @@
 codesnap
 colohighligh
-dracula
+tokyonightstorm
 imagepreview
 material icon theme
 vspets
