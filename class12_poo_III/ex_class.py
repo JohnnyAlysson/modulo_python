@@ -1,25 +1,21 @@
-class Livro:
-    def __init__(self,codigo,titulo,autor,editora):
-        self.codigo = codigo
-        self.titulo = titulo
-        self.autor = autor
-        self.editora = editora
 
+class Biblioteca:
+    def __init__(self, nome):
+        self.nome = nome
+        self.livros = []
+
+class Livro:
+    def __init__(self, titulo, autor, biblioteca):
+        self.titulo = titulo 
+        self.autor = autor
+        self.biblioteca = biblioteca
+    
     def __repr__(self):
         return f"Titulo: {self.titulo} - Autor: {self.autor}"
-    
 
-class Editora:
-    def __init__(self,nome,email):
-        self.nome = nome
-        self.email = email
-
-    def __repr__(self):
-        return f"Nome: {self.nome} - Email: {self.email}"
-    
-editora= Editora("Editora infinity LTDA","infinity@gmail.com")
-livro = Livro("1", "Codigo limpo", "James", editora)
-print(livro)
-print(livro.editora)
-print(livro.editora.nome)
-print(editora)
+biblioteca = Biblioteca("Biblio Infinity")
+livro1 = Livro("Harry potter", "JK Rolling", biblioteca)
+livro2 = Livro("Codigo Limpo", "James", biblioteca)
+biblioteca.livros.append(livro1)
+biblioteca.livros.append(livro2)
+print(biblioteca.livros)
