@@ -18,11 +18,11 @@ pessoa3 = Pessoa("Xiquim",80,72.5,"Não binário")
 lista=[pessoa1,pessoa2,pessoa3]
 
 for pessoa in lista:
-   print(f'''
+  print(f'''
     Nome = {pessoa.nome}
     Idade = {pessoa.idade}
     Peso = {pessoa.peso}
     Gênero = {pessoa.genero}
 
-   ''')
-   print("="*30)
+''')
+  print("="*30)
