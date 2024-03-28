@@ -1,0 +1,5 @@
+para fazer a conexao entra python o SQL:
+
+1.Utilizar um ambiente virtual
+2.baixar lib pymysql
+3.
