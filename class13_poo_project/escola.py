@@ -1,16 +1,16 @@
 from aluno import Aluno
 
 class Escola:
-    def __init__(self,nome,endereço):
+    def __init__(self, nome: str, endereco: str):
         self.nome = nome
-        self.endereço = endereço
-        self.lista_alunos = [Aluno("Jonas",19,"python",8.2)]
+        self.endereco = endereco
+        self.alunos = [Aluno('Jonas', 18, 'Python', 10.0)]
 
-    def adicionarAluno(self,aluno:Aluno):
-        self.lista_alunos.append(aluno)
+    def cadastrarAluno(self, aluno: Aluno):
+        self.alunos.append(aluno)
 
-    def editarAluno(self,aluno:Aluno):
-        for a in self.lista_alunos:
+    def editarAluno(self, aluno: Aluno):
+        for a in self.alunos:
             if str(a.matricula) == str(aluno.matricula):
                 a.nome = aluno.nome
                 a.idade = aluno.idade
@@ -18,17 +18,16 @@ class Escola:
                 a.nota = aluno.nota
                 return True
         return False
-
-    def removerAluno(self,matricula):
-        for aluno in self.lista_alunos:
-            if str(aluno.matricula) == matricula:
-                self.lista_alunos.remove(aluno)
+    
+    def deletarAluno(self, matricula: str):
+        for aluno in self.alunos:
+            if str(aluno.matricula) == str(matricula):
+                self.alunos.remove(aluno)
                 return True
         return False
-        
 
     def listarAlunos(self):
-        return self.lista_alunos
+        return self.alunos
     
 if __name__ == "__main__":
     escola= Escola("Infinity", "Rua D")
