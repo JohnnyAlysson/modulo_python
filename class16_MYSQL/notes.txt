@@ -2,4 +2,9 @@ para fazer a conexao entra python o SQL:
 
 1.Utilizar um ambiente virtual
 2.baixar lib pymysql
-3.
+3.criar um arquivo .py
+4.criar uma conexão( conexao com servidor) e cursor( executar os comandos)
+5. o conector é realizado com a funçao pymysql.connect()
+6. deve ser passado os parametros principais qual servidos, qual usario, qual a senha, e qual basededados  essas informações ficam em sectior no mySQL
+7.A conexão pode ser criada em um função ex: criarConexao()
+8 e para chamar o cursor basta chamar a função e o cursor ex: criarConexao().cursor()
