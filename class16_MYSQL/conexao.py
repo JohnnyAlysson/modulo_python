@@ -1,5 +1,4 @@
 import pymysql.cursors
-import cowsay
 
 
 #conexão e cursor
@@ -10,16 +9,15 @@ def criarConexao():
                                 password="",
                                 database="biblioteca",
                                 cursorclass=pymysql.cursors.DictCursor)
-        # mensagem = "Conexão realizada com sucesso\n"
-        # print(cowsay.get_output_string('cow', mensagem))
+        print("Conexão realizada com sucesso\n")
+
         return conexao
     except Exception as error:
         print(f"Erro ao conectar-se ao banco! {error}")
 
 def listarTodosLivros():
     try:
-        #Criando cursos
-       
+        #Criando cursors
         cursor= criarConexao().cursor()
         cursor.execute("SELECT * FROM livros")
 
