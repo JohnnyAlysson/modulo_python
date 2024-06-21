@@ -1,6 +1,4 @@
 import pymysql.cursors
-
-
 #conexão e cursor
 def criarConexao():
     try:
